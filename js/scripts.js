@@ -2,7 +2,11 @@ const numeri = [];
 const numeriIndividuati= [];
 
 for(let i = 0 ; i < 5 ; i++){
-    const numeriRandom = numeriCasuali(1,100);
+
+    let numeriRandom = numeriCasuali(1,100);
+    while(numeri.includes(numeriRandom)){
+    numeriRandom = numeriCasuali(1,100);
+    }
     numeri.push(numeriRandom);
     setTimeout(() => numeriInPagina.innerHTML="" , 3000);
     
